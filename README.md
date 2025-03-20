@@ -199,6 +199,7 @@ The system automatically organizes databases in the following locations:
 
 
 ## Next Steps
+- Improve file organization and naming conventions
 - Add context into the RAG - currently it only supports one shot prompting, should be able to support multi-shot with user context without much additional work
 - Build a better app - maybe hosted on a website so users don't have to host locally
 - Add support for additional LLM models
