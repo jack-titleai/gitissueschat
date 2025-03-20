@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitissueschat"
+version = "0.1.0"
+description = "A tool for fetching and analyzing GitHub issues"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Jack Teitel", email = "jackteitel@example.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyGithub>=1.55",
+    "python-dotenv>=0.19.0",
+    "tqdm>=4.62.0",
+    "chromadb>=0.4.18",
+    "google-cloud-aiplatform>=1.30.0",
+    "vertexai>=1.0.0",
+    "google-generativeai>=0.3.0",
+    "pytz>=2022.1",
+    "python-dateutil>=2.8.2",
+    "requests>=2.28.0",
+    "llama-index-core>=0.10.0",
+    "faiss-cpu>=1.7.4",
+    "streamlit>=1.30.0",
+    "numpy>=1.24.0",
+    "pydantic>=2.5.0",
+    "pandas>=2.0.0",
+    "tiktoken>=0.5.0",
+    "chainlit>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.5b2",
+    "isort>=5.9.1",
+    "mypy>=0.812",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jack-titleai/gitissueschat"
+"Bug Tracker" = "https://github.com/jack-titleai/gitissueschat/issues"
+
+[project.scripts]
+gitissueschat = "gitissueschat.main:main"
+fetch-repo = "gitissueschat.scripts.fetch_repo:main"
+
+[tool.setuptools]
+packages = ["gitissueschat", "gitissueschat.embed", "gitissueschat.sqlite_storage", "gitissueschat.scripts", "gitissueschat.rag", "gitissueschat.streamlit_app", "gitissueschat.utils", "gitissueschat.chainlit_app"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
