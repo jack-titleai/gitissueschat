@@ -61,6 +61,11 @@ GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/google_credentials.json"
 ## Test Repositories
 The system has been tested with repositories of various sizes:
 
+- **Extra Small** - FlyFish
+    - https://github.com/CloudWise-OpenSource/FlyFish
+    - 81 closed issues
+    - 21 open issues
+
 - **Small** - fastai 
     - https://github.com/fastai/fastai
     - 1595 closed issues 
